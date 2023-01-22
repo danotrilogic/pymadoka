@@ -291,7 +291,7 @@ class MQTT:
         root_topic = self.ROOT_TOPIC 
         if "root_topic" in self.mqtt_cfg:
             root_topic = self.mqtt_cfg["root_topic"]
-        normalized_name = self.controller.connection.address
+        normalized_name = "device_" + self.controller.connection.address
         normalized_name = normalized_name.replace(" ","_")
         normalized_name = normalized_name.replace(":","_")
         normalized_name = normalized_name.replace("/","_")
